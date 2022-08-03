@@ -1,1 +1,20 @@
 <p>person works!</p>
+<p *ngIf="!person"> ładuje się przecież nie widać ????? xDDDD </p>
+
+<table class="table" *ngIf="person">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Comments</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let item of person">
+            <td>{{item.personId}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.comment}}</td>
+        </tr>
+    </tbody>
+     
+</table>
